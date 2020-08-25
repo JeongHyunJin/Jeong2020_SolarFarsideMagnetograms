@@ -14,7 +14,7 @@ Hyperparameters
 -------------
 
 __The Loss configuration of the Objective functions of the Generator__
-* cGAN loss and feature matching loss   
+* Total loss = ( cGAN loss ) + 10 * ( Feature Matching loss )   
 
 __Optimizer__
 * Optimizer : Adam solver
