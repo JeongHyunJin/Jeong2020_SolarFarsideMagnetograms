@@ -26,13 +26,14 @@ if __name__ == '__main__':
     dataset = CustomDataset(opt)
     test_data_loader = DataLoader(dataset, batch_size=1, num_workers=2, shuffle=False)
     iters = opt.iteration
+    step = opt.save_freq
     
     #####################################################################################
     Max_iter = 400000 ######### You can change the Maximum iteration value. #############
     #####################################################################################
-    
+
     if iters == False :
-        for i in range(10000,Max_iter+10000,10000):
+        for i in range(step,Max_iter+step,step):
             
             ITERATION = int(i)
             path_model = './checkpoints/{}/Model_base/{}/{}_G.pt'.format(str(STD), MODEL_NAME, str(ITERATION))
