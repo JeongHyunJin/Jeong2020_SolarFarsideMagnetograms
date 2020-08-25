@@ -27,9 +27,12 @@ if __name__ == '__main__':
     test_data_loader = DataLoader(dataset, batch_size=1, num_workers=2, shuffle=False)
     iters = opt.iteration
     
-
+    #####################################################################################
+    Max_iter = 400000 ######### You can change the Maximum iteration value. #############
+    #####################################################################################
+    
     if iters == False :
-        for i in range(10000,400000+10000,10000):
+        for i in range(10000,Max_iter+10000,10000):
             
             ITERATION = int(i)
             path_model = './checkpoints/{}/Model_base/{}/{}_G.pt'.format(str(STD), MODEL_NAME, str(ITERATION))
