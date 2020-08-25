@@ -30,7 +30,7 @@ In our model, we use two 70*70 patch discriminator.
 One discriminator gets input pairs of the original pixel size, and the other gets input pairs which are downsampled by half.
 
    
-      
+****************      
       
 Hyperparameters
 -------------
