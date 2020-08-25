@@ -23,4 +23,4 @@ __Optimizer__
 * momentum beta 2 parameter : 0.999   
 
 __Initializer__
-* Initialize Weights in Convolutional and Transposed Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
+* Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
