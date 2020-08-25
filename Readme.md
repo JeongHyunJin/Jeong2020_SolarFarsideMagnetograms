@@ -16,16 +16,16 @@ The generator is consist of the Encoder - Residual Blocks - Decoder.
 
 * Encoder
 1. Conv2D(filter = 32, strides = 1), InstanceNorm2d, ReLU
-(2~nD). Conv2D(filter = 32*2^(1~nD), strides = 2), InstanceNorm2d, ReLU 
+i_nD+1. Conv2D(filter = 32*2^(i_nD+1), strides = 2), InstanceNorm2d, ReLU 
 - nD: How many times you want to downsample input data
 
 * Residual Blocks (The number of residual blocks: nR)
-(1~nR)-1. Conv2D(filter = 512, strides = 1), InstanceNorm2d, ReLU
-(1~nR)-2. Conv2D(filter = 512, strides = 1), InstanceNorm2d
+i_nR -1. Conv2D(filter = 32*2^(nD+1), strides = 1), InstanceNorm2d, ReLU
+i_nR -2. Conv2D(filter = 32*2^(nD+1), strides = 1), InstanceNorm2d
 
 * Decoder
-(1~nD-1). Conv2DTranspose(filter = 512//2^(1~nD), strides = 2), InstanceNorm2d, ReLU
-nD. Conv2DTranspose(filter = 32, strides = 1)
+i_nD. Conv2DTranspose(filter = 32*2^(nD+1)//2^(i_nD), strides = 2), InstanceNorm2d, ReLU
+i_nD+1. Conv2DTranspose(filter = 32, strides = 1)
    
 __Discriminator architectures__
 
