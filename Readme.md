@@ -9,6 +9,7 @@ The model consists of two major networks: one is a generative network (generator
 The generator tries to generate realistic output from input, and the discriminator tries to distinguish which one is a more real-like pair between a real pair and a fake pair.  
 
 __Generator architectures__
+
 In our model, we use a global generator.
 The generator is consist of the Encoder - Residual Blocks - Decoder architecture:
 
@@ -23,6 +24,7 @@ The generator is consist of the Encoder - Residual Blocks - Decoder architecture
 
 
 __Discriminator architectures__
+
 In our model, we use two 70*70 patch discriminator.
 
 
