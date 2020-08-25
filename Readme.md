@@ -11,14 +11,14 @@ The generator tries to generate realistic output from input, and the discriminat
 Hyperparameters
 -------------
 
-The loss configuration of the objective functions of the Generator
+__The Loss configuration of the Objective functions of the Generator__
 * cGAN loss and feature matching loss
 
-Optimizer
+__Optimizer__
 * Optimizer : Adam solver
 * Learning rate : 0.0002
 * momentum beta 1 parameter : 0.5
 * momentum beta 2 parameter : 0.999
 
-Initializer
+__Initializer__
 * Initialize Weights in Convolutional and Transposed Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02
