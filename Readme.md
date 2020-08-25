@@ -13,7 +13,7 @@ The generator tries to generate realistic output from input, and the discriminat
 Hyperparameters
 -------------
 
-__The Loss configuration of the Objective functions of the Generator__
+__The Loss configuration of the Objective functions__
 * Total loss = ( cGAN loss ) + 10 * ( Feature Matching loss )   
 
 __Optimizer__
