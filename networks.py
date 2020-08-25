@@ -46,7 +46,7 @@ class PatchDiscriminator(nn.Module):
         act = nn.LeakyReLU(0.2, inplace=True)
         input_channel = opt.input_ch + opt.output_ch
         n_df = opt.n_df
-        norm = nn.InstanceNorm2d if opt.HD else nn.BatchNorm2d
+        norm = nn.InstanceNorm2d
 
         blocks = []
         blocks += [[nn.Conv2d(input_channel, n_df, kernel_size=4, padding=1, stride=2), act]]
@@ -125,11 +125,11 @@ class Loss(object):
         for i in range(self.n_D):
             real_grid = get_grid(fake_features[i][-1], is_real=True).to(self.device, self.dtype)
             loss_G += self.criterion(fake_features[i][-1], real_grid)
-
-            if self.opt.HD:
-                for j in range(len(fake_features[0])):
-                    loss_G_FM += self.FMcriterion(fake_features[i][j], real_features[i][j].detach())
-                loss_G += loss_G_FM * (1.0 / self.opt.n_D) * self.opt.lambda_FM
+            
+            for j in range(len(fake_features[0])):
+                loss_G_FM += self.FMcriterion(fake_features[i][j], real_features[i][j].detach())
+                
+            loss_G += loss_G_FM * (1.0 / self.opt.n_D) * self.opt.lambda_FM
 
         return loss_D, loss_G, target, fake
 
