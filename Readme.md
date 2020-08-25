@@ -11,7 +11,7 @@ The generator tries to generate realistic output from input, and the discriminat
 __Generator architectures__
 
 In our model, we use a global generator.
-The generator is consist of the Encoder - Residual Blocks - Decoder architecture:
+The generator is consist of the Encoder - Residual Blocks - Decoder.
 
 * Encoder
 
@@ -26,6 +26,7 @@ The generator is consist of the Encoder - Residual Blocks - Decoder architecture
 __Discriminator architectures__
 
 In our model, we use two 70*70 patch discriminator.
+One discriminator gets input pairs of the original pixel size, and the other gets input pairs which are downsampled by half.
 
 
 Hyperparameters
