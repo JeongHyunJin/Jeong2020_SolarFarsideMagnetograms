@@ -15,20 +15,23 @@ class BaseOption(object):
         # data option
         self.parser.add_argument('--input_ch', type=int, default=3, help="# of input channels for Generater")
         
-        self.parser.add_argument('--saturation_lower_limit_input', type=int, default=1, help="Saturation value (lower limit) of input")
-        self.parser.add_argument('--saturation_upper_limit_input', type=int, default=200, help="Saturation value (upper limit) of input")
-        self.parser.add_argument('--saturation_lower_limit_target', type=int, default=-3000, help="Saturation value (lower limit) of target")
-        self.parser.add_argument('--saturation_upper_limit_target', type=int, default=3000, help="Saturation value (upper limit) of target")
+        self.parser.add_argument('--saturation_lower_limit_input', type=float, default=1, help="Saturation value (lower limit) of input")
+        self.parser.add_argument('--saturation_upper_limit_input', type=float, default=200, help="Saturation value (upper limit) of input")
+        self.parser.add_argument('--saturation_lower_limit_target', type=float, default=-3000, help="Saturation value (lower limit) of target")
+        self.parser.add_argument('--saturation_upper_limit_target', type=float, default=3000, help="Saturation value (upper limit) of target")
 
         # data augmentation
         self.parser.add_argument('--batch_size', type=int, default=1, help='the number of batch_size')
-        self.parser.add_argument('--dataset_name', type=str, default='AIA_to_HMI/', help='[dataset directory name')
+        self.parser.add_argument('--dataset_name', type=str, default='AIA_to_HMI', help='dataset directory name')
         self.parser.add_argument('--data_type', type=int, default=32, help='float dtype')
         self.parser.add_argument('--image_mode', type=str, default='png', help='extension for saving image')
-        self.parser.add_argument('--n_downsample', type=int, default=5, help='how many times you want to downsample input data in G')
+        self.parser.add_argument('--n_downsample', type=int, default=4, help='how many times you want to downsample input data in G')
         self.parser.add_argument('--n_residual', type=int, default=9, help='the number of residual blocks in G')
         self.parser.add_argument('--n_workers', type=int, default=1, help='how many threads you want to use')
         self.parser.add_argument('--norm_type', type=str, default='InstanceNorm2d', help='[BatchNorm2d, InstanceNorm2d]')
+        self.parser.add_argument('--padding_type', type=str, default='reflection', help='[reflection, replication, zero]')
+        self.parser.add_argument('--padding_size', type=int, default=0, help='padding size')
+        self.parser.add_argument('--max_rotation_angle', type=int, default=0, help='rotation angle in degrees')
         self.parser.add_argument('--val_during_train', action='store_true', default=False)
 
     def parse(self):
@@ -46,18 +49,17 @@ class BaseOption(object):
             opt.eps = 1e-8
 
         dataset_name = opt.dataset_name
-        model_name = "pix2pixHD"
 
-        os.makedirs(os.path.join('./checkpoints', dataset_name, 'Image', 'Train', model_name), exist_ok=True)
-        os.makedirs(os.path.join('./checkpoints', dataset_name, 'Image', 'Test', model_name), exist_ok=True)
-        os.makedirs(os.path.join('./checkpoints', dataset_name, 'Model', model_name), exist_ok=True)
+        os.makedirs(os.path.join('./checkpoints', dataset_name, 'Image', 'Train'), exist_ok=True)
+        os.makedirs(os.path.join('./checkpoints', dataset_name, 'Image', 'Test'), exist_ok=True)
+        os.makedirs(os.path.join('./checkpoints', dataset_name, 'Model'), exist_ok=True)
 
         if opt.is_train:
-            opt.image_dir = os.path.join('./checkpoints', dataset_name, 'Image/Train', model_name)
+            opt.image_dir = os.path.join('./checkpoints', dataset_name, 'Image/Train')
         else:
-            opt.image_dir = os.path.join('./checkpoints', dataset_name, 'Image/Test', model_name)
+            opt.image_dir = os.path.join('./checkpoints', dataset_name, 'Image/Test')
 
-        opt.model_dir = os.path.join('./checkpoints', dataset_name, 'Model', model_name)
+        opt.model_dir = os.path.join('./checkpoints', dataset_name, 'Model')
         
         
         return opt
