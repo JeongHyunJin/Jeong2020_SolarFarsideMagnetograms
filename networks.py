@@ -36,7 +36,7 @@ class Generator(nn.Module):
         print("the number of G parameters", sum(p.numel() for p in self.parameters() if p.requires_grad))
 
     def forward(self, x):
-        self.model(x)
+        return self.model(x)
         
 
 class PatchDiscriminator(nn.Module):
