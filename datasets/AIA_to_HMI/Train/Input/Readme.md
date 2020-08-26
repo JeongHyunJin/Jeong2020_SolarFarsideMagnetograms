@@ -1,4 +1,4 @@
-Input Data for our deep learning model
+Input Data for Training Our Model
 ======================================
 
 * SDO/AIA three (30.4, 19.3, and 17.1 nm) passband images.
