@@ -1,5 +1,5 @@
 Input Data for Training Our Model
-======================================
+---------------------------------
 
 * SDO/AIA three (30.4, 19.3, and 17.1 nm) passband images.
 * The images have a cadence of 12 hour (at 00 UT and 12 UT each day) from 1 January 2011 to 31 December 2017.
