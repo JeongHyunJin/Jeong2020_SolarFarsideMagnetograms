@@ -1,5 +1,5 @@
 Input Data for Testing Our Model
-================================
+--------------------------------
 
 * SDO/AIA three (30.4, 19.3, and 17.1 nm) passband images.
 * The images have a cadence of 12 hour (at 00 UT and 12 UT each day) from 1 January 2011 to 31 December 2017.
@@ -13,10 +13,10 @@ Input Data for Testing Our Model
 * And we combine the three passband images from the SDO into the RGB channel dimensions.
 * Finally we manually exclude a set of data with poor quality; for example, too noise images because of solar flares, those with incorrect header information, those with infrequent events such as eclipses, transits, etc..
 
-\
+|
 
 Input Data for the Generation of the Solar Farside
-================================
+--------------------------------------------------
 * STEREO/EUVI -A & -B (30.4, 19.5, and 17.1 nm) passband images, whose have similar response characteristics to the SDO/AIA images.
 * The farside EUV images are selected from the closest times (within one hour) to the HMI synoptic data, which is a boundary condition for the coronal magnetic field extrapolation.
 * We make Level 1.5 images with the standard SolarSoftWare (SSW) packages of secchi prep.pro function, which process the images by calibrating, rotating and centering.
