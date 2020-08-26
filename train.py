@@ -122,8 +122,7 @@ if __name__ == '__main__':
                 for p in G.parameters():
                     p.requires_grad_(True)
 
-            if opt.debug:
-                break
+            
 
         if epoch > opt.epoch_decay and opt.HD:
             lr = update_lr(lr, init_lr, opt.n_epochs - opt.epoch_decay, D_optim, G_optim)
