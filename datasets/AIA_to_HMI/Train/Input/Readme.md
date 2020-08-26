@@ -6,7 +6,7 @@ Input Data for our deep learning model
 * We construct training sets with ten months and evaluation sets with two months, and both are randomly selected for each year without any duplication between the two sets.
 * Data pre-processing is applied to the EUV data and magnetograms for the effective training and generating.
 * We make Level 1.5 images with the standard SolarSoftWare (SSW) packages of aia_prep.pro function, which process the images by calibrating, rotating and centering.
-* We downsample them from 4096  4096 to 1024  1024 pixels, and the solar radius (Rsun) were fixed at 450 pixels.
+* We downsample them from 4096*4096 to 1024*1024 pixels, and the solar radius (Rsun) were fixed at 450 pixels.
 * We mask the area outside 0.98 Rsun of disk center to minimize the uncertainty of limb data.
 * For the calibration of all EUV data, all data numbers are scaled by median values of the original data on the solar disk, which are fixed at 100.
 * Then the logarithms of the scaled data are normalized from -1 to 1 with the saturation values of 0 (lower limit) and log(200) (upper limit).
