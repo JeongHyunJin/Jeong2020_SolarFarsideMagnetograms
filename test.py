@@ -12,12 +12,11 @@ if __name__ == '__main__':
 
 
     STD = 'AIAMul_HMI720'
-    MODEL_NAME = 'pix2pixHD'
     torch.backends.cudnn.benchmark = True
 
     dir_input = './datasets/{}/Test/Input'.format(str(STD))
     dir_target = './datasets/{}/Test/Target'.format(str(STD))
-    dir_model = './checkpoints/{}/Model/{}'.format(str(STD), MODEL_NAME)
+    dir_model = './checkpoints/{}/Model/{}'.format(str(STD))
     
     opt = TestOption().parse()
     os.environ['CUDA_VISIBLE_DEVICES'] = str(opt.gpu_ids)
@@ -36,8 +35,8 @@ if __name__ == '__main__':
         for i in range(step,Max_iter+step,step):
             
             ITERATION = int(i)
-            path_model = './checkpoints/{}/Model_base/{}/{}_G.pt'.format(str(STD), MODEL_NAME, str(ITERATION))
-            dir_image_save = './checkpoints/{}/Image_base/Test/{}/{}'.format(str(STD), MODEL_NAME, str(ITERATION))
+            path_model = './checkpoints/{}/Model_base/{}/{}_G.pt'.format(str(STD), str(ITERATION))
+            dir_image_save = './checkpoints/{}/Image_base/Test/{}/{}'.format(str(STD), str(ITERATION))
             os.makedirs(dir_image_save, exist_ok=True)
         
             G = Generator(opt).to(device)
@@ -65,8 +64,8 @@ if __name__ == '__main__':
 
     else:
         ITERATION = int(iters)
-        path_model = './checkpoints/{}/Model/{}/{}_G.pt'.format(str(STD), MODEL_NAME, str(ITERATION))
-        dir_image_save = './checkpoints/{}/Image/Test/{}/{}'.format(str(STD), MODEL_NAME, str(ITERATION))
+        path_model = './checkpoints/{}/Model/{}/{}_G.pt'.format(str(STD), str(ITERATION))
+        dir_image_save = './checkpoints/{}/Image/Test/{}/{}'.format(str(STD), str(ITERATION))
         os.makedirs(dir_image_save, exist_ok=True)
     
         G = Generator(opt).to(device)
@@ -91,3 +90,4 @@ if __name__ == '__main__':
                     np.save(os.path.join(dir_image_save, name[0] + '_Mag.fits'), np_fake, allow_pickle=True)
                 else:
                     NotImplementedError("Please check data_format_target option. It has to be fits or npy.")
+                
