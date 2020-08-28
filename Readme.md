@@ -13,8 +13,7 @@ __Generator architectures__
 
 In our model, we use a global generator.
 The generator is consist of the Encoder - Residual Blocks - Decoder.
-The 'nD' indicate how many times you want to downsample input data.
-And the 'nR' indicate the number of residual blocks.
+The 'nD' indicate how many times you want to downsample input data, and the 'nR' indicate the number of residual blocks.
 
 * Encoder
 1. Conv2D(filter = 32, strides = 1), InstanceNorm2d, ReLU
