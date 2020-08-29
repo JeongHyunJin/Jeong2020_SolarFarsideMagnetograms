@@ -13,25 +13,25 @@ The generator tries to generate realistic output from input, and the discriminat
 
 __Generator architectures__
 
-In our model, we use a global generator.
+In our model, we use a global generator (G).
 The generator is consist of the Encoder - Residual Blocks - Decoder.
-The 'nD' indicate how many times you want to downsample input data, and the 'nR' indicate the number of residual blocks.
+The 'nd' indicate how many times you want to downsample input data, and the 'nr' indicate the number of residual blocks.
 
 * Encoder
 1. Conv2D(filter = 32, strides = 1), InstanceNorm2d, ReLU
-2. Conv2D(filter = 32*2^(i_nD+1), strides = 2), InstanceNorm2d, ReLU 
+2. Conv2D(filter = 32*2^(i_nd+1), strides = 2), InstanceNorm2d, ReLU 
 
-* Residual Blocks (*nR)
-1. Conv2D(filter = 32*2^(nD+1), strides = 1), InstanceNorm2d, ReLU
-2. Conv2D(filter = 32*2^(nD+1), strides = 1), InstanceNorm2d
+* Residual Blocks (*nr)
+1. Conv2D(filter = 32*2^(nd+1), strides = 1), InstanceNorm2d, ReLU
+2. Conv2D(filter = 32*2^(nd+1), strides = 1), InstanceNorm2d
 
 * Decoder
-1. Conv2DTranspose(filter = 32*2^(nD+1)//2^(i_nD), strides = 2), InstanceNorm2d, ReLU
+1. Conv2DTranspose(filter = 32*2^(nd+1)//2^(i_nd), strides = 2), InstanceNorm2d, ReLU
 2. Conv2DTranspose(filter = 32, strides = 1)
    
 __Discriminator architectures__
 
-In our model, we use two 70*70 patch discriminator.
+In our model, we use two 70*70 patch discriminator (D_1 and D_2).
 One discriminator gets input pairs of the original pixel size, and the other gets input pairs which are downsampled by half.
 
 1. Conv2D(filers = 64, strides = 2), LeakyReLu(slope = 0.2)
