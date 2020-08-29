@@ -12,6 +12,7 @@ Network architectures
 -------------
     The model consists of two major networks: 
     one is a generative network (generator) and the other is a discriminative network (discriminator).
+    
     The generator tries to generate realistic output from input, and the discriminator tries to disti-
     nguish which one is a more real-like pair between a real pair and a fake pair.  
 
@@ -21,17 +22,17 @@ __Generator architectures__
     The generator is consist of the Encoder - Residual Blocks - Decoder.
     The 'nd' indicate how many times you want to downsample input data, and the 'nr' indicate the number of residual blocks.
 
-* Encoder
-     1. Conv2D(filter = 32, strides = 1), InstanceNorm2d, ReLU
-     2. Conv2D(filter = 32*2^(i_nd+1), strides = 2), InstanceNorm2d, ReLU 
+    * Encoder
+         1. Conv2D(filter = 32, strides = 1), InstanceNorm2d, ReLU
+         2. Conv2D(filter = 32*2^(i_nd+1), strides = 2), InstanceNorm2d, ReLU 
 
-* Residual Blocks (*nr)
-     1. Conv2D(filter = 32*2^(nd+1), strides = 1), InstanceNorm2d, ReLU
-     2. Conv2D(filter = 32*2^(nd+1), strides = 1), InstanceNorm2d
+    * Residual Blocks (*nr)
+         1. Conv2D(filter = 32*2^(nd+1), strides = 1), InstanceNorm2d, ReLU
+         2. Conv2D(filter = 32*2^(nd+1), strides = 1), InstanceNorm2d
 
-* Decoder
-     1. Conv2DTranspose(filter = 32*2^(nd+1)//2^(i_nd), strides = 2), InstanceNorm2d, ReLU
-     2. Conv2DTranspose(filter = 32, strides = 1)
+    * Decoder
+         1. Conv2DTranspose(filter = 32*2^(nd+1)//2^(i_nd), strides = 2), InstanceNorm2d, ReLU
+        2. Conv2DTranspose(filter = 32, strides = 1)
    
 __Discriminator architectures__
 
