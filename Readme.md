@@ -36,11 +36,11 @@ __Discriminator architectures__
     In our model, we use two 70*70 patch discriminator (D_1 and D_2).
     One discriminator gets input pairs of the original pixel size, and the other gets input pairs which are downsampled by half.
 
-1. Conv2D(filers = 64, strides = 2), LeakyReLu(slope = 0.2)
-2. Conv2D(filers = 128, strides = 2), InstanceNorm, LeakyReLu(slope = 0.2)
-3. Conv2D(filers = 256, strides = 2), InstanceNorm, LeakyReLu(slope = 0.2)
-4. Conv2D(filers = 512, strides = 2), InstanceNorm, LeakyReLu(slope = 0.2)
-5. Conv2D(filers = 1, strides = 1)
+    1. Conv2D(filers = 64, strides = 2), LeakyReLu(slope = 0.2)
+    2. Conv2D(filers = 128, strides = 2), InstanceNorm, LeakyReLu(slope = 0.2)
+    3. Conv2D(filers = 256, strides = 2), InstanceNorm, LeakyReLu(slope = 0.2)
+    4. Conv2D(filers = 512, strides = 2), InstanceNorm, LeakyReLu(slope = 0.2)
+    5. Conv2D(filers = 1, strides = 1)
 
 
 
