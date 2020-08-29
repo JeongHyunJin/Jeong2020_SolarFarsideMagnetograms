@@ -10,9 +10,10 @@ Pix2PixHD model
 _____________  
 Network architectures
 -------------
-    The model consists of two major networks: one is a generative network (generator) and the other is a discriminative network (discriminator).
-    The generator tries to generate realistic output from input,
-    and the discriminator tries to distinguish which one is a more real-like pair between a real pair and a fake pair.  
+    The model consists of two major networks: 
+    one is a generative network (generator) and the other is a discriminative network (discriminator).
+    The generator tries to generate realistic output from input, and the discriminator tries to disti-
+    nguish which one is a more real-like pair between a real pair and a fake pair.  
 
 __Generator architectures__
 
