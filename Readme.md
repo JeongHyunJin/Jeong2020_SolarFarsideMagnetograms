@@ -20,16 +20,16 @@ __Generator architectures__
     The 'nd' indicate how many times you want to downsample input data, and the 'nr' indicate the number of residual blocks.
 
 * Encoder
-1. Conv2D(filter = 32, strides = 1), InstanceNorm2d, ReLU
-2. Conv2D(filter = 32*2^(i_nd+1), strides = 2), InstanceNorm2d, ReLU 
+     1. Conv2D(filter = 32, strides = 1), InstanceNorm2d, ReLU
+     2. Conv2D(filter = 32*2^(i_nd+1), strides = 2), InstanceNorm2d, ReLU 
 
 * Residual Blocks (*nr)
-1. Conv2D(filter = 32*2^(nd+1), strides = 1), InstanceNorm2d, ReLU
-2. Conv2D(filter = 32*2^(nd+1), strides = 1), InstanceNorm2d
+     1. Conv2D(filter = 32*2^(nd+1), strides = 1), InstanceNorm2d, ReLU
+     2. Conv2D(filter = 32*2^(nd+1), strides = 1), InstanceNorm2d
 
 * Decoder
-1. Conv2DTranspose(filter = 32*2^(nd+1)//2^(i_nd), strides = 2), InstanceNorm2d, ReLU
-2. Conv2DTranspose(filter = 32, strides = 1)
+     1. Conv2DTranspose(filter = 32*2^(nd+1)//2^(i_nd), strides = 2), InstanceNorm2d, ReLU
+     2. Conv2DTranspose(filter = 32, strides = 1)
    
 __Discriminator architectures__
 
@@ -49,13 +49,13 @@ Hyperparameters
 -------------
 
 __The Loss configuration of the Objective functions__    
-     * Total loss = ( cGAN loss ) + 10 * ( Feature Matching loss )   
+* Total loss = ( cGAN loss ) + 10 * ( Feature Matching loss )   
 
 __Optimizer__    
-     * Optimizer : Adam solver
-     * Learning rate : 0.0002
-     * momentum beta 1 parameter : 0.5
-     * momentum beta 2 parameter : 0.999   
+* Optimizer : Adam solver
+* Learning rate : 0.0002
+* momentum beta 1 parameter : 0.5
+* momentum beta 2 parameter : 0.999   
 
 __Initializer__  
-     * Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
+* Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
