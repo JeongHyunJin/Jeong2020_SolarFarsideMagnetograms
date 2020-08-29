@@ -48,14 +48,14 @@ _____________
 Hyperparameters
 -------------
 
-__The Loss configuration of the Objective functions__
+__The Loss configuration of the Objective functions__    
      * Total loss = ( cGAN loss ) + 10 * ( Feature Matching loss )   
 
-__Optimizer__
+__Optimizer__    
      * Optimizer : Adam solver
      * Learning rate : 0.0002
      * momentum beta 1 parameter : 0.5
      * momentum beta 2 parameter : 0.999   
 
-__Initializer__
+__Initializer__  
      * Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
