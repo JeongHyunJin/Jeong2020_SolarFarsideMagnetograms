@@ -12,9 +12,11 @@ Then we generate realistic farside magnetograms from the corresponding EUV bassb
 
 Pix2PixHD model
 ===============
+
 <p align="center">
 <img src="https://user-images.githubusercontent.com/68056295/91625647-f2e28180-e9e3-11ea-8469-f9d4c932fe35.png" width="70%" height="70%"></center>
 </p>
+
 _____________  
 Network architectures
 -------------
