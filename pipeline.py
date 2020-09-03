@@ -41,7 +41,7 @@ class CustomDataset(Dataset):
             if self.input_format in ["fits", "fts"]:
                 IMG_A0 = np.array(fits.open(self.label_path_list[index])[0].data).transpose(2, 0 ,1)
             elif self.input_format in ["npy"]:
-                IMG_A0 = np.load(self.label_path_list[index], allow_pickle=True)
+                IMG_A0 = np.load(self.label_path_list[index], allow_pickle=True).transpose(2, 0 ,1)
             else:
                 NotImplementedError("Please check data_format_input option. It has to be fits or npy.")
                 
@@ -95,7 +95,7 @@ class CustomDataset(Dataset):
             if self.input_format in ["fits", "fts"]:                    
                 IMG_A0 = np.array(fits.open(self.label_path_list[index])[0].data).transpose(2, 0 ,1)
             elif self.input_format in ["npy"]:
-                IMG_A0 = np.load(self.label_path_list[index], allow_pickle=True)
+                IMG_A0 = np.load(self.label_path_list[index], allow_pickle=True).transpose(2, 0 ,1)
             else:
                 NotImplementedError("Please check data_format_input option. It has to be fits or npy.")
                 
