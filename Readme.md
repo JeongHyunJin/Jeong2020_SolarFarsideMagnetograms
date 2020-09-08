@@ -56,7 +56,6 @@ __Discriminator architectures__
         4. Conv2D(filers = 512, strides = 2), InstanceNorm, LeakyReLu(slope = 0.2)
         5. Conv2D(filers = 1, strides = 1)
          
-===============
 
 
 _____________
@@ -74,3 +73,5 @@ __Optimizer__
 
 __Initializer__  
 * Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
+
+_____________
