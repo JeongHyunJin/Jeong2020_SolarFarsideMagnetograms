@@ -9,7 +9,7 @@ Then we generate realistic farside magnetograms from the corresponding EUV bassb
 <img src="https://user-images.githubusercontent.com/68056295/91798144-3137a500-ec5f-11ea-96d2-efd7cc208747.png" width="150%" height="150%"></center>
 </p>
 
-_____________
+
 Pix2PixHD model
 ===============
 The Pix2PixHD is based on conditional Generative Adversarial Networks (cGANs) framework, which is one of the popular deep learning methods for image translation.
@@ -58,7 +58,7 @@ __Discriminator architectures__
          
 
 
-_____________
+-------------
 Hyperparameters
 -------------
 
@@ -74,4 +74,4 @@ __Optimizer__
 __Initializer__  
 * Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
 
-_____________
+
