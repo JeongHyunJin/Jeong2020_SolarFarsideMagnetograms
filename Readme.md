@@ -55,7 +55,8 @@ __Discriminator architectures__
         3. Conv2D(filers = 256, strides = 2), InstanceNorm, LeakyReLu(slope = 0.2)
         4. Conv2D(filers = 512, strides = 2), InstanceNorm, LeakyReLu(slope = 0.2)
         5. Conv2D(filers = 1, strides = 1)
-
+         
+===============
 
 
 _____________
