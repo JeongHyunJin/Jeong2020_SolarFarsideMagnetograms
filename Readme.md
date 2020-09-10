@@ -79,4 +79,6 @@ __Optimizer__
 __Initializer__  
 * Initialize Weights in Convolutional Layers : normal distribution, mean : 0.0, standard deviation : 0.02   
 
+<br/>
+
 _____________  
