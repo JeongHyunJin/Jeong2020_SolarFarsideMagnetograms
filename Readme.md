@@ -9,6 +9,8 @@ Then we generate realistic farside magnetograms from the corresponding EUV bassb
 <img src="https://user-images.githubusercontent.com/68056295/91798144-3137a500-ec5f-11ea-96d2-efd7cc208747.png" width="150%" height="150%"></center>
 </p>
 
+<br/>
+
 _____________  
 
 <br/>
