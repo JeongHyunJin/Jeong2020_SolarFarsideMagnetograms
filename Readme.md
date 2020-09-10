@@ -9,6 +9,8 @@ Then we generate realistic farside magnetograms from the corresponding EUV bassb
 <img src="https://user-images.githubusercontent.com/68056295/91798144-3137a500-ec5f-11ea-96d2-efd7cc208747.png" width="150%" height="150%"></center>
 </p>
 
+<br/>
+<br/>
 
 Pix2PixHD model
 ===============
@@ -18,8 +20,6 @@ The Pix2PixHD is based on conditional Generative Adversarial Networks (cGANs) fr
 <img src="https://user-images.githubusercontent.com/68056295/91625647-f2e28180-e9e3-11ea-8469-f9d4c932fe35.png" width="70%" height="70%"></center>
 </p>
 
-<br/>
-<br/>
 _____________  
 Network architectures
 -------------
