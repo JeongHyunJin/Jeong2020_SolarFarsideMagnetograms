@@ -15,7 +15,7 @@ Input Data for Testing Our Model
 
 |
 
-Input Data for the Generation of the Solar Farside
+Input Data for the Generation of the Solar Farside Magnetograms
 --------------------------------------------------
 * STEREO/EUVI -A & -B (30.4, 19.5, and 17.1 nm) passband images, whose have similar response characteristics to the SDO/AIA images.
 * The farside EUV images are selected from the closest times (within one hour) to the HMI synoptic data, which is a boundary condition for the coronal magnetic field extrapolation.
