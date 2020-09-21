@@ -124,7 +124,7 @@ if __name__ == '__main__':
 
             
 
-        if epoch > opt.epoch_decay and opt.HD:
+        if epoch > opt.epoch_decay :
             lr = update_lr(lr, init_lr, opt.n_epochs - opt.epoch_decay, D_optim, G_optim)
 
     print("Total time taken: ", datetime.datetime.now() - start_time)
