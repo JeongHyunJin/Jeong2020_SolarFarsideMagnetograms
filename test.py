@@ -15,6 +15,8 @@ if __name__ == '__main__':
     opt = TestOption().parse()
     os.environ['CUDA_VISIBLE_DEVICES'] = str(opt.gpu_ids)
     device = torch.device('cuda:0')
+    
+    STD = opt.dataset_name
 
     dataset = CustomDataset(opt)
     test_data_loader = DataLoader(dataset, batch_size=1, num_workers=2, shuffle=False)
