@@ -16,11 +16,6 @@ if __name__ == '__main__':
     os.environ['CUDA_VISIBLE_DEVICES'] = str(opt.gpu_ids)
     device = torch.device('cuda:0')
 
-    STD = opt.dataset_name
-    dir_input = './datasets/{}/Test/Input'.format(str(STD))
-    dir_target = './datasets/{}/Test/Target'.format(str(STD))
-    dir_model = './checkpoints/{}/Model'.format(str(STD))
-
     dataset = CustomDataset(opt)
     test_data_loader = DataLoader(dataset, batch_size=1, num_workers=2, shuffle=False)
     iters = opt.iteration
