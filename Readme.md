@@ -25,7 +25,7 @@ The Pix2PixHD is based on conditional Generative Adversarial Networks (cGANs) fr
 
 <br/>
 
-Environment
+Environments
 ------------
 This code has been tested on Ubuntu 18.04 with a Nvidia GeForce GTX Titan XP GPU, CUDA Version 11.0, Python 3.6.9, and PyTorch 1.3.1.
 
