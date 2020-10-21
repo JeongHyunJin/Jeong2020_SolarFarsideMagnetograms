@@ -94,7 +94,7 @@ _____________
 Citation
 ===============
 
-If you use this code for your research, please consider citing our [arXiv preprint][1].
+If you use this code for your research, please consider citing our [arXiv preprint](https://arxiv.org/abs/2010.07553).
 
     @misc{jeong2020solar,
           title={Solar coronal magnetic field extrapolation from synchronic data with AI-generated farside}, 
