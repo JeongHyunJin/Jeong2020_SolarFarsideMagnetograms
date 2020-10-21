@@ -107,4 +107,3 @@ If you use this code for your research, please consider citing our [arXiv prepri
 
 
 
-[1] Solar coronal magnetic field extrapolation from synchronic data with AI-generated farside, https://arxiv.org/abs/2010.07553
