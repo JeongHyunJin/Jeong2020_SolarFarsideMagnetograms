@@ -9,6 +9,6 @@ Input Data for Training Our Model
 * We downsample them from 4096 X 4096 to 1024 X 1024 pixels, and the solar radius (Rsun) were fixed at 450 pixels.
 * We mask the area outside 0.98 Rsun of disk center to minimize the uncertainty of limb data.
 * For the calibration of all EUV data, all data numbers are scaled by median values of the original data on the solar disk, which are fixed at 100.
-* Then the logarithms of the scaled data are normalized from -1 to 1 with the saturation values of 0 (lower limit) and log(200) (upper limit).
+* Then the logarithms of the scaled data are normalized from -1 to 1 with the saturation values of 0 (lower limit) and log(200) (upper limit). ( ->  pipeline.py)
 * And we combine the three passband images from the SDO into the RGB channel dimensions.
 * Finally we manually exclude a set of data with poor quality; for example, too noise images because of solar flares, those with incorrect header information, those with infrequent events such as eclipses, transits, etc..
