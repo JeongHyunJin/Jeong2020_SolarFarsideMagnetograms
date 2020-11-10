@@ -99,7 +99,7 @@ Citation
 If you use this code for your research, please consider citing our [paper](https://iopscience.iop.org/article/10.3847/2041-8213/abc255). ([arXiv preprint](https://arxiv.org/abs/2010.07553))
 
     @article{jeong2020solar,
-    title={Solar Coronal Magnetic Field Extrapolation from Synchronic Data with AI-generated Farside},
+    title={Solar coronal magnetic field extrapolation from synchronic data with AI-generated farside},
     author={Jeong, Hyun-Jin and Moon, Yong-Jae and Park, Eunsu and Lee, Harim},
     journal={The Astrophysical Journal Letters},
     volume={903},
