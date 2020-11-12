@@ -112,8 +112,8 @@ if __name__ == '__main__':
                     UpIB = opt.saturation_upper_limit_target
                     LoIB = opt.saturation_lower_limit_target
                     
-                    np_fake = fake.cpu().numpy().squeeze() *((UpIB - LoIB)/2) +(UpIB+ LoIB)
-                    np_real = target.cpu().numpy().squeeze()  *((UpIB - LoIB)/2) +(UpIB+ LoIB)
+                    np_fake = fake.cpu().numpy().squeeze() *((UpIB - LoIB)/2) +(UpIB+ LoIB)/2
+                    np_real = target.cpu().numpy().squeeze()  *((UpIB - LoIB)/2) +(UpIB+ LoIB)/2
                     
                     manager.save_image(np.clip(np_fake,-100,100)/100, path=os.path.join(test_image_dir, 'Check_{:d}_'.format(current_step)+ name[0] + '_fake.png'))
                     manager.save_image(np.clip(np_real,-100,100)/100, path=os.path.join(test_image_dir, 'Check_{:d}_'.format(current_step)+ name[0] + '_real.png'))
