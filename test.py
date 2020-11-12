@@ -78,7 +78,7 @@ if __name__ == '__main__':
                 UpIB = opt.saturation_upper_limit_target
                 LoIB = opt.saturation_lower_limit_target
                     
-                np_fake = fake.cpu().numpy().squeeze() *((UpIB - LoIB)/2) +(UpIB+ LoIB)
+                np_fake = fake.cpu().numpy().squeeze() *((UpIB - LoIB)/2) +(UpIB+ LoIB)/2
                 
                 if opt.data_format_input in ["fits", "fts"]:       
                     fits.writeto(os.path.join(dir_image_save, name[0] + '_AI.fits'), np_fake)
