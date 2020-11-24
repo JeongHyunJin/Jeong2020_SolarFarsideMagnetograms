@@ -34,6 +34,10 @@ class BaseOption(object):
         self.parser.add_argument('--max_rotation_angle', type=int, default=0, help='rotation angle in degrees')
         self.parser.add_argument('--val_during_train', action='store_true', default=False)
 
+        self.parser.add_argument('--report_freq', type=int, default=10)
+        self.parser.add_argument('--save_freq', type=int, default=10000)
+        self.parser.add_argument('--display_freq', type=int, default=100)
+        
     def parse(self):
         opt = self.parser.parse_args()
         opt.format = 'png'
@@ -79,11 +83,7 @@ class TrainOption(BaseOption):
         self.parser.add_argument('--GAN_type', type=str, default='LSGAN', help='[GAN, LSGAN, WGAN_GP]')
         self.parser.add_argument('--lambda_FM', type=int, default=10, help='weight for FM loss')
         self.parser.add_argument('--lr', type=float, default=0.0002)
-        self.parser.add_argument('--n_D', type=int, default=2, help='how many discriminators in differet scales you want to use')
-        
-        self.parser.add_argument('--report_freq', type=int, default=10)
-        self.parser.add_argument('--save_freq', type=int, default=10000)
-        self.parser.add_argument('--display_freq', type=int, default=100)
+        self.parser.add_argument('--n_D', type=int, default=2, help='how many discriminators in differet scales you want to use')      
         self.parser.add_argument('--no_shuffle', action='store_true', default=False, help='if you want to shuffle the order')
         
 
@@ -93,5 +93,5 @@ class TestOption(BaseOption):
         super(TestOption, self).__init__()
         
         self.parser.add_argument('--is_train', type=bool, default=False, help='test flag')
-        self.parser.add_argument('--iteration', type=bool, default=False, help='if you want to generate from input for the specific iteration')
+        self.parser.add_argument('--iteration', type=int, default=-1, help='if you want to generate from input for the specific iteration')
         self.parser.add_argument('--no_shuffle', type=bool, default=True, help='if you want to shuffle the order')
