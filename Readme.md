@@ -114,7 +114,7 @@ If you use this code for your research, please consider citing our [paper](https
 * Correction in our paper: <br/>
 
 1) We trained our model with 3412 pairs of training dataset for 630,000 iterations (∼180 epochs). <br/>
-The number of epoch was not 150 but 180.  
+The number of epoch was 180, not 150.  
 It is a hyperparameter that defines the number times that the deep learning model works through the entire training dataset. <br/>
 (the number of epoch) = (iterations) / (the number of dataset).
 
