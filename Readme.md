@@ -113,14 +113,12 @@ If you use this code for your research, please consider citing our [paper](https
 
 * Correction in our paper: <br/>
 
-i) We trained our model with 3412 pairs of training dataset for 630,000 iterations (∼180 epochs). <br/>
+1) We trained our model with 3412 pairs of training dataset for 630,000 iterations (∼180 epochs). <br/>
 The number of epoch was not 150 but 180.  
 It is a hyperparameter that defines the number times that the deep learning model works through the entire training dataset. <br/>
 (the number of epoch) = (iterations) / (the number of dataset).
 
-<br/>
-
-ii) We used [LSGAN](https://arxiv.org/abs/1611.04076) loss instead of cGAN loss in our deep learning model. 
+2) We used [LSGAN](https://arxiv.org/abs/1611.04076) loss instead of cGAN loss in our deep learning model. 
 
 
 _____________  
