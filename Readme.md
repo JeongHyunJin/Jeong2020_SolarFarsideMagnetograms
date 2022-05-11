@@ -122,9 +122,11 @@ It is a hyperparameter that defines the number times that the deep learning mode
 
 3) When we construct global photospheric maps and compute the PFSS model, we used Heliographic coordinates, not Carrinton coordinates.
 
+<br/>
+<br/>
 
 
-* Improved AI-generated solar farside magnetograms:  https://github.com/JeongHyunJin/AISFM3.0
+* Improved AI-generated Solar Farside Magnetograms:  https://github.com/JeongHyunJin/AISFM3.0
 
 
 _____________  
