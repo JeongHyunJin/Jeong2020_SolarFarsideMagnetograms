@@ -120,6 +120,12 @@ It is a hyperparameter that defines the number times that the deep learning mode
 
 2) We used [LSGAN](https://arxiv.org/abs/1611.04076) loss instead of cGAN loss in our deep learning model. 
 
+3) When we construct global photospheric maps and compute the PFSS model, we used Heliographic coordinates, not Carrinton coordinates.
+
+
+
+* Improved AI-generated solar farside magnetograms:  https://github.com/JeongHyunJin/AISFM3.0
+
 
 _____________  
 
