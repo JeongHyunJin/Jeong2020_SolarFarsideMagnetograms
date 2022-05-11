@@ -128,6 +128,7 @@ It is a hyperparameter that defines the number times that the deep learning mode
 
 * Improved AI-generated Solar Farside Magnetograms:  https://github.com/JeongHyunJin/AISFM3.0
 
+<br/>
 
 _____________  
 
